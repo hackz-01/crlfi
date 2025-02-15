@@ -1,6 +1,6 @@
 package main
 
-import github.comhackz-01crliinternalrunner
+import "github.com/hackz-01/crlfi/internal/runner"
 
 func main() {
 	options = runner.ParseOptions()
