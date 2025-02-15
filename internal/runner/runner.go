@@ -5,8 +5,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/dwisiswant0/crlfuzz/pkg/crlfuzz"
-	"github.com/dwisiswant0/crlfuzz/pkg/errors"
+	"github.com/hackz-01/crlfi/pkg/crlfi"
+	"github.com/hackz-01/crlfi/pkg/errors"
 	"github.com/logrusorgru/aurora"
 )
 
@@ -27,7 +27,7 @@ func New(options *Options) {
 
 	for _, line := range strings.Split(options.Target, "\n") {
 		if isURL(line) {
-			for _, url := range crlfuzz.GenerateURL(line) {
+			for _, url := range crlfi.GenerateURL(line) {
 				jobs <- url
 			}
 		}
@@ -38,7 +38,7 @@ func New(options *Options) {
 }
 
 func (options *Options) run(url string) {
-	v, e := crlfuzz.Scan(
+	v, e := crlfi.Scan(
 		url,
 		options.Method,
 		options.Data,
