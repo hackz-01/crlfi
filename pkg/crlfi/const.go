@@ -1,6 +1,6 @@
-package crlfuzz
+package crlfi
 
 const (
 	keyHeader = "X-Injected-Header-By"
-	valHeader = "CRLFuzz"
+	valHeader = "CRLFI"
 )
