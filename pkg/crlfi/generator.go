@@ -1,4 +1,4 @@
-package crlfuzz
+package crlfi
 
 import (
 	"fmt"
