@@ -1,4 +1,4 @@
-module github.com/dwisiswant0/crlfuzz
+module github.com/hackz-01/crlfi
 
 go 1.14
 
