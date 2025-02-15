@@ -2,17 +2,24 @@ package runner
 
 const (
   version = "1.4.0"
-  author  = "dwisiswant0"
+  author  = "Fire Hacker"
   banner  = `
-   _____ _____ __    _____             
-  |     | __  |  |  |   __|_ _ ___ ___ 
-  |   --|    -|  |__|   __| | |- _|- _|
-  |_____|__|__|_____|__|  |___|___|___|
+
+ ▄████▄   ██▀███   ██▓      █████▒██▓
+▒██▀ ▀█  ▓██ ▒ ██▒▓██▒    ▓██   ▒▓██▒
+▒▓█    ▄ ▓██ ░▄█ ▒▒██░    ▒████ ░▒██▒
+▒▓▓▄ ▄██▒▒██▀▀█▄  ▒██░    ░▓█▒  ░░██░
+▒ ▓███▀ ░░██▓ ▒██▒░██████▒░▒█░   ░██░
+░ ░▒ ▒  ░░ ▒▓ ░▒▓░░ ▒░▓  ░ ▒ ░   ░▓  
+  ░  ▒     ░▒ ░ ▒░░ ░ ▒  ░ ░      ▒ ░
+░          ░░   ░   ░ ░    ░ ░    ▒ ░
+░ ░         ░         ░  ░        ░  
+░                                    
 
       v` + version + ` - @` + author
   usage = `
-  [buffers] | crlfuzz [options]
-  crlfuzz [options]`
+  [buffers] | crlfi [options]
+  crlfi [options]`
   options = `
   -u, --url <URL>           Define single URL to fuzz
   -l, --list <FILE>         Fuzz URLs within file
