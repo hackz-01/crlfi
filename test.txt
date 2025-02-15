@@ -1,0 +1,5 @@
+https://www.thrivemarket.com/
+http://api.thrivemarket.com 
+http://origin.api.thrivemarket.com 
+http://thrivemarket.com
+https://next.statsig.com
