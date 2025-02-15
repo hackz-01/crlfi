@@ -1,11 +1,11 @@
-package crlfuzz
+package crlfi
 
 import (
 	"errors"
 	"net/http"
 	"strings"
 
-	"github.com/dwisiswant0/crlfuzz/pkg/request"
+	"github.com/hackz-01/crlfi/pkg/request"
 )
 
 // Scan will scanning for CRLF vulnerability against target
