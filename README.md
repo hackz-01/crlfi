@@ -1,10 +1,4 @@
-# CRLFuzz
-
-[![made-with-Go](https://img.shields.io/badge/made%20with-Go-brightgreen.svg)](http://golang.org)
-[![go-report](https://goreportcard.com/badge/github.com/dwisiswant0/crlfuzz)](https://goreportcard.com/report/github.com/dwisiswant0/crlfuzz)
-[![license](https://img.shields.io/badge/license-MIT-_red.svg)](https://opensource.org/licenses/MIT)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwisiswant0/crlfuzz/issues)
-[![godoc](https://img.shields.io/badge/godoc-reference-brightgreen.svg)](https://godoc.org/github.com/dwisiswant0/crlfuzz)
+# CRLFI
 
 A fast tool to scan CRLF vulnerability written in Go
 
@@ -34,9 +28,6 @@ A fast tool to scan CRLF vulnerability written in Go
 	- [Verbose](#verbose)
 	- [Version](#version)
 	- [Library](#library)
-- [Help & Bugs](#help--bugs)
-- [License](#license)
-- [Version](#version)
 
 ## Installation
 
@@ -227,16 +218,3 @@ func main() {
 		}
 	}
 }
-```
-
-## Help & Bugs
-
-If you are still confused or found a bug, please [open the issue](https://github.com/dwisiswant0/crlfuzz/issues). All bug reports are appreciated, some features have not been tested yet due to lack of free time.
-
-## License
-
-**CRLFuzz** released under MIT. See `LICENSE` for more details.
-
-## Version
-
-**Current version is 1.4.0** and still development.
