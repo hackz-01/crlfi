@@ -3,8 +3,8 @@ package crlfi
 var (
 	appendList = [...]string{
 		"",
-		"crlfuzz",
-		"?crlfuzz=",
+		"crlfi",
+		"?crlfi=",
 		"#",
 	}
 
