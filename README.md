@@ -36,7 +36,7 @@ A fast tool to scan CRLF vulnerability written in Go
 The installation is easy. You can download a prebuilt binary from [releases page](https://github.com/hackz-01/crlfi/releases), unpack and run! or with
 
 ```bash
-▶ curl -sSfL https://git.io/crlfuzz | sh -s -- -b /usr/local/bin
+curl -sSfL https://git.io/crlfi | sh -s -- -b /usr/local/bin
 ```
 
 ### from Source
@@ -44,7 +44,7 @@ The installation is easy. You can download a prebuilt binary from [releases page
 If you have go1.13+ compiler installed and configured:
 
 ```bash
-▶ GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
+GO111MODULE=on go install github.com/hackz-01/crlfi/cmd/crlfi@latest
 ```
 
 In order to update the tool, you can use `-u` flag with go get command.
@@ -52,26 +52,26 @@ In order to update the tool, you can use `-u` flag with go get command.
 ### from GitHub
 
 ```bash
-▶ git clone https://github.com/dwisiswant0/crlfuzz
-▶ cd crlfuzz/cmd/crlfuzz
-▶ go build .
-▶ mv crlfuzz /usr/local/bin
+git clone https://github.com/hackz-01/crlfi
+cd crlfi/cmd/crlfi
+go build .
+mv crlfi /usr/local/bin
 ```
 
 ## Usage
 
 ### Basic Usage
 
-Simply, CRLFuzz can be run with:
+Simply, crlfi can be run with:
 
 ```bash
-▶ crlfuzz -u "http://target"
+crlfi -u "http://target"
 ```
 
 ### Flags
 
 ```bash
-▶ crlfuzz -h
+crlfi -h
 ```
 
 This will display help for the tool. Here are all the switches it supports.
@@ -88,7 +88,7 @@ This will display help for the tool. Here are all the switches it supports.
 | -c, --concurrent 	| Set the concurrency level _(default: 25)_      	|
 | -s, --silent     	| Silent mode                                    	|
 | -v, --verbose    	| Verbose mode                                   	|
-| -V, --version    	| Show current CRLFuzz version                   	|
+| -V, --version    	| Show current crlfi version                   	|
 | -h, --help       	| Display its help                               	|
 
 ### Target
@@ -98,13 +98,13 @@ You can define a target in 3 ways:
 #### Single URL
 
 ```bash
-▶ crlfuzz -u "http://target"
+crlfi -u "http://target"
 ```
 
 #### URLs from list
 
 ```bash
-▶ crlfuzz -l /path/to/urls.txt
+crlfi -l /path/to/urls.txt
 ```
 
 #### from Stdin
@@ -112,16 +112,16 @@ You can define a target in 3 ways:
 In case you want to chained with other tools.
 
 ```bash
-▶ subfinder -d target -silent | httpx -silent | crlfuzz
+subfinder -d target -silent | httpx -silent | crlfi
 ```
 
 ### Method
 
-By default, CRLFuzz makes requests with `GET` method.
+By default, crlfi makes requests with `GET` method.
 If you want to change it, you can use the `-X` flag.
 
 ```bash
-▶ crlfuzz -u "http://target" -X "GET"
+crlfi -u "http://target" -X "GET"
 ```
 
 ### Output
@@ -129,7 +129,7 @@ If you want to change it, you can use the `-X` flag.
 You can also save fuzzing results to a file with `-o` flag.
 
 ```bash
-▶ crlfuzz -l /path/to/urls.txt -o /path/to/results.txt
+crlfi -l /path/to/urls.txt -o /path/to/results.txt
 ```
 
 ### Data
@@ -137,7 +137,7 @@ You can also save fuzzing results to a file with `-o` flag.
 If you want to send a data request using POST, DELETE. PATCH or other methods, you just need to use `-d` flag.
 
 ```bash
-▶ crlfuzz -u "http://target" -X "POST" -d "data=body"
+crlfi -u "http://target" -X "POST" -d "data=body"
 ```
 
 ### Adding Headers
@@ -145,7 +145,7 @@ If you want to send a data request using POST, DELETE. PATCH or other methods, y
 May you want to use custom headers to add cookies or other header parts.
 
 ```bash
-▶ crlfuzz -u "http://target" -H "Cookie: ..." -H "User-Agent: ..."
+crlfi -u "http://target" -H "Cookie: ..." -H "User-Agent: ..."
 ```
 
 ### Using Proxy
@@ -153,15 +153,15 @@ May you want to use custom headers to add cookies or other header parts.
 Using a proxy, proxy string can be specified with a `protocol://` prefix to specify alternative proxy protocols.
 
 ```bash
-▶ crlfuzz -u "http://target" -x http://127.0.0.1:8080
+crlfi -u "http://target" -x http://127.0.0.1:8080
 ```
 
 ### Concurrency
 
-Concurrency is the number of fuzzing at the same time. Default value CRLFuzz provide is `25`, you can change it by using `-c` flag.
+Concurrency is the number of fuzzing at the same time. Default value CRLFI provide is `25`, you can change it by using `-c` flag.
 
 ```bash
-▶ crlfuzz -l /path/to/urls.txt -c 50
+crlfi -l /path/to/urls.txt -c 50
 ```
 
 ### Silent
@@ -169,7 +169,7 @@ Concurrency is the number of fuzzing at the same time. Default value CRLFuzz pro
 If you activate this silent mode with the `-s` flag, you will only see vulnerable targets.
 
 ```bash
-▶ crlfuzz -l /path/to/urls.txt -s | tee vuln-urls.txt
+crlfi -l /path/to/urls.txt -s | tee vuln-urls.txt
 ```
 
 ### Verbose
@@ -177,20 +177,20 @@ If you activate this silent mode with the `-s` flag, you will only see vulnerabl
 Unlike silent mode, it will display error details if there is an error with the `-v` flag.
 
 ```bash
-▶ crlfuzz -l /path/to/urls.txt -v
+crlfi -l /path/to/urls.txt -v
 ```
 
 ### Version
 
-To display the current version of CRLFuzz with the `-V` flag.
+To display the current version of CRLFI with the `-V` flag.
 
 ```bash
-▶ crlfuzz -V
+crlfi -V
 ```
 
 ### Library
 
-You can use CRLFuzz as a library.
+You can use CRLFI as a library.
 
 ```go
 package main
@@ -198,7 +198,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/dwisiswant0/crlfuzz/pkg/crlfuzz"
+	"github.com/dwisiswant0/crlfi/pkg/crlfi"
 )
 
 func main() {
@@ -206,9 +206,9 @@ func main() {
 	method := "GET"
 
 	// Generates a potentially CRLF vulnerable URLs
-	for _, url := range crlfuzz.GenerateURL(target) {
+	for _, url := range crlfi.GenerateURL(target) {
 		// Scan against target
-		vuln, err := crlfuzz.Scan(url, method, "", []string{}, "")
+		vuln, err := crlfi.Scan(url, method, "", []string{}, "")
 		if err != nil {
 			panic(err)
 		}
