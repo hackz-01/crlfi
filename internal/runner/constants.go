@@ -31,7 +31,7 @@ const (
   -c, --concurrent <i>      Set the concurrency level (default: 20)
   -s, --silent              Silent mode
   -v, --verbose             Verbose mode
-  -V, --version             Show current CRLFuzz version
+  -V, --version             Show current CRLFI version
   -h, --help                Display its help
 `
 )
